@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+.jost {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#countdown {
+    font-size: 2rem;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    background-image: url(img/paperboard-texture.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    color: #3d5919;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    gap: 40px;
+}
+
+.head h1 {
+    color: #5b6c37;
+    font-family: "Great Vibes", cursive;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.head .invitation {
+    margin-top: 20px;
+    border-bottom: solid 2px #c4baa0;
+    width: auto;
+    padding: 0px 50px 10px 50px;
+}
+
+.head .invitation h2 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.date h2 {
+    font-weight: 400;
+}
+
+.text{
+    width: auto;
+}
+
+.text h2{
+    font-weight: 500;
+    letter-spacing: 0.4rem;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 7rem;
+    background-color: #5b6c37;
+    border-radius: 20px;
+    padding: 10px 20px 0px 20px;
+    color: #fff2dc;
+}
+
+/* imagens */
+#louro {
+    width: 300px;
+    padding: 20px;
+}
+
+#flowers-left,
+#flowers-right {
+    position: fixed;
+    bottom: 0;
+    width: 500px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#flowers-left {
+    left: 0;
+}
+
+#flowers-right {
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    #flowers-left,
+    #flowers-right {
+        width: 200px;
+        z-index: 0;
+    }
+
+    #flowers-left {
+        left: -50px;
+    }
+
+    #flowers-right {
+        right: -50px;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+}
