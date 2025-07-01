@@ -34,7 +34,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
-    color: #5b6c37;
+    color: #fff2dc;
 }
 
 .head {
@@ -49,13 +49,13 @@ body {
 
 .head h1 {
     font-family: "Great Vibes", cursive;
-    font-size: 3.9rem;
+    font-size: 3.5rem;
     font-weight: 400;
 }
 
 .head .invitation {
     margin-top: 20px;
-    border-bottom: solid 2px #5b6c37;
+    border-bottom: solid 2px #97a775;
     width: auto;
     padding: 0px 50px 10px 50px;
 }
@@ -71,7 +71,9 @@ body {
 
 .text{
     width: auto;
-    padding: 5px;
+    margin: 20px;
+    padding-bottom: 10px;
+    border-bottom: solid 2px #97a775;
 }
 
 .text h2{
@@ -87,7 +89,6 @@ body {
     align-items: center;
     gap: 20px;
     font-size: 2rem;
-    border-top: solid 2px #5b6c37;
     margin: 20px;
 }
 
@@ -102,7 +103,7 @@ body {
     border-radius: 25px;
     box-shadow: 1px 1px 5px #333;
     overflow: hidden;
-    border: 3px solid #5b6c37;
+    border: 3px solid #fff2dc;
     object-fit: contain;
     height: 150px;
 }
@@ -125,7 +126,7 @@ body {
 }
 
 #local {
-    background: #5b6c37;
+    background: #97a775;
     height: 200px;
     width: 200px;
     font-size: 5rem;
@@ -133,6 +134,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    color: #fff;
 }
 
 .button img {
