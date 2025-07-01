@@ -22,3 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
 });
+
+function copyPix() {
+  const pixText = document.querySelector('.pix-number').childNodes[0].nodeValue.trim();
+  navigator.clipboard.writeText(pixText);
+}

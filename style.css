@@ -34,7 +34,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
-    color: #c3dda0;
+    color: #5b6c37;
 }
 
 .head {
@@ -55,7 +55,7 @@ body {
 
 .head .invitation {
     margin-top: 20px;
-    border-bottom: solid 2px #c4baa0;
+    border-bottom: solid 2px #5b6c37;
     width: auto;
     padding: 0px 50px 10px 50px;
 }
@@ -81,18 +81,14 @@ body {
 }
 
 .links {
-    display: grid;
-    grid-template-areas:
-        'head head'
-        'ft sec'
-        'mid mid'
-        'pix pix'
-        'local local'
-        'btnlocal btnlocal';
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 65px 1fr 65px 140px 65px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     font-size: 2rem;
+    border-top: solid 2px #5b6c37;
+    margin: 20px;
 }
 
 .button {
@@ -104,53 +100,44 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 25px;
-    transition: background-color 0.3s ease;
     box-shadow: 1px 1px 5px #333;
     overflow: hidden;
-    font-weight: bold;
-    color: #fff;
-    border: 3px solid #c3dda0;
+    border: 3px solid #5b6c37;
     object-fit: contain;
+    height: 150px;
 }
 
-#first {
-    grid-area: ft;
-    background: #fff;
-}
-
-#second {
-    grid-area: sec;
+#magalu {
     background: #0e89ff;
 }
 
-#third {
-    font-size: 2rem;
-    grid-area: btnlocal;
-    background: #c3dda0;
-    justify-content: space-evenly;
+#havan {
+    background: #fff;
+}
+
+.localdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+#local {
+    background: #5b6c37;
     height: 200px;
     width: 200px;
-}
-
-#third img {
-    width: 150px;
-    margin-top: 5px;
-}
-
-#forth {
-    font-size: 2rem;
-    grid-area: fh;
-    background: #c3dda0;
-    justify-content: space-evenly;
-}
-
-#forth img {
-    width: 150px;
-    margin-top: 5px;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .button img {
     width: 200px;
+    object-fit: contain;
 }
 
 .button:hover {
@@ -162,18 +149,23 @@ body {
 }
 
 .links h2 {
-    font-size: 2em;
-    margin: 0px;
+    font-size: 2rem;
+    margin-top: 10px;
+    font-weight: 500;
+    font-weight: 400;
+}
+
+.pix-number {
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
-.link1 { grid-area: head; }
-#first { grid-area: ft; }
-#second { grid-area: sec; }
-.link2 { grid-area: mid; }
-#pix { grid-area: pix; justify-self: center; }
-.link3 { grid-area: local; }
-#third { grid-area: btnlocal; justify-self: center; width: 100%; }
+#pix-img {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+}
 
 /* imagens */
 #louro {
@@ -192,9 +184,13 @@ body {
 }
 
 #flowers-left {
-    left: -80px;
+    left: -70px;
 }
 
 #flowers-right {
-    right: -80px;
+    right: -70px;
+}
+
+.pix-number {
+    cursor: pointer;
 }
