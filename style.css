@@ -18,9 +18,10 @@
 
 body {
     font-family: "Jost", sans-serif;
-    background-image: url(img/paperboard-texture.jpg);
+    background-image: url(img/sunset.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .container {
@@ -32,7 +33,8 @@ body {
     font-weight: 400;
     text-align: center;
     position: relative;
-    color: #3d5919;
+    z-index: 1;
+    color: #c3dda0;
 }
 
 .head {
@@ -46,9 +48,8 @@ body {
 }
 
 .head h1 {
-    color: #5b6c37;
     font-family: "Great Vibes", cursive;
-    font-size: 5rem;
+    font-size: 3.9rem;
     font-weight: 400;
 }
 
@@ -70,30 +71,109 @@ body {
 
 .text{
     width: auto;
+    padding: 5px;
 }
 
 .text h2{
     font-weight: 500;
     letter-spacing: 0.4rem;
+    font-size: 1.2rem;
 }
 
 .links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
+    display: grid;
+    grid-template-areas:
+        'head head'
+        'ft sec'
+        'mid mid'
+        'pix pix'
+        'local local'
+        'btnlocal btnlocal';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 65px 1fr 65px 140px 65px 90px;
+    gap: 20px;
+    font-size: 2rem;
 }
 
-a {
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: white;
     text-decoration: none;
-    text-align: center;
-    font-size: 7rem;
-    background-color: #5b6c37;
-    border-radius: 20px;
-    padding: 10px 20px 0px 20px;
-    color: #fff2dc;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    box-shadow: 1px 1px 5px #333;
+    overflow: hidden;
+    font-weight: bold;
+    color: #fff;
+    border: 3px solid #c3dda0;
+    object-fit: contain;
 }
+
+#first {
+    grid-area: ft;
+    background: #fff;
+}
+
+#second {
+    grid-area: sec;
+    background: #0e89ff;
+}
+
+#third {
+    font-size: 2rem;
+    grid-area: btnlocal;
+    background: #c3dda0;
+    justify-content: space-evenly;
+    height: 200px;
+    width: 200px;
+}
+
+#third img {
+    width: 150px;
+    margin-top: 5px;
+}
+
+#forth {
+    font-size: 2rem;
+    grid-area: fh;
+    background: #c3dda0;
+    justify-content: space-evenly;
+}
+
+#forth img {
+    width: 150px;
+    margin-top: 5px;
+}
+
+.button img {
+    width: 200px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #ffffff;
+}
+
+.links h2 {
+    font-size: 2em;
+    margin: 0px;
+    font-weight: 500;
+}
+
+.link1 { grid-area: head; }
+#first { grid-area: ft; }
+#second { grid-area: sec; }
+.link2 { grid-area: mid; }
+#pix { grid-area: pix; justify-self: center; }
+.link3 { grid-area: local; }
+#third { grid-area: btnlocal; justify-self: center; width: 100%; }
 
 /* imagens */
 #louro {
@@ -105,37 +185,16 @@ a {
 #flowers-right {
     position: fixed;
     bottom: 0;
-    width: 500px;
+    width: 150px;
     pointer-events: none;
-    z-index: 10;
+    z-index: 0;
+    opacity: 0.5;
 }
 
 #flowers-left {
-    left: 0;
+    left: -80px;
 }
 
 #flowers-right {
-    right: 0;
-}
-
-@media (max-width: 768px) {
-    #flowers-left,
-    #flowers-right {
-        width: 200px;
-        z-index: 0;
-    }
-
-    #flowers-left {
-        left: -50px;
-    }
-
-    #flowers-right {
-        right: -50px;
-    }
-
-    .container {
-        position: relative;
-        z-index: 1;
-    }
-
+    right: -80px;
 }
